@@ -1,27 +1,31 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+:host {
+    display: flex;
+    justify-content: flex-start;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.content-container {
+    display: flex;
+    width: 1128px;
+    margin: 40px auto 0;
+    @media (max-width:1200px) {
+        width: auto;
+        justify-content: center;
+        margin-top: 0;
+    }
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+app-all-posts .post-divider {
+    margin: 0 12px;
 }
 
-#container a {
-  text-decoration: none;
+
+.post-divider {
+    padding-top: 8px;
+    margin: 0 12px;
+}
+
+app-tabs {
+    margin-top: auto;
 }

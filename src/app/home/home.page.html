@@ -1,20 +1,12 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
+<div class="content-container">
+    <app-profile-summary class="ion-hide-xl-down"></app-profile-summary>
+    <div>
+    <app-start-post (create)="onCreatePost($event)"></app-start-post>
+        <div class="item-divider post-divider"></div>
+        <app-all-posts [postBody]="body"></app-all-posts>
+    </div>
+    <app-advertising class="ion-hide-xl-down"></app-advertising>
+</div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+<app-tabs class="ion-hide-md-up"></app-tabs>
